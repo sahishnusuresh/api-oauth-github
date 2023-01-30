@@ -1,0 +1,14 @@
+{
+  "name": "@api-oauth-github/services",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "aws-sdk": "^2.1304.0",
+    "lambda-multipart-parser": "^1.0.1",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.110"
+  }
+}
