@@ -28,14 +28,18 @@ const App = () => {
     try {
       const response = await API.get("api", "/private", {
         headers: {
-          Authorization: `Bearer ${(await Auth.currentSession())
+          Authorization: `${(await Auth.currentSession())
             .getAccessToken()
             .getJwtToken()}`,
         },
       });
-      alert(JSON.stringify(response));
+      console.log(JSON.stringify(response))
+      alert(JSON.stringify(response))
+      return(JSON.stringify(response));
     } catch (error) {
+      
       alert(error);
+
     }
   };
 

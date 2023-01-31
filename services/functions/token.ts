@@ -2,6 +2,7 @@ import fetch from "node-fetch";
 import parser from "lambda-multipart-parser";
 
 import { APIGatewayProxyHandlerV2 } from "aws-lambda";
+import { Response } from "aws-sdk";
 
 export const handler: APIGatewayProxyHandlerV2 = async (event) => {
   const result = await parser.parse(event);
@@ -16,6 +17,6 @@ export const handler: APIGatewayProxyHandlerV2 = async (event) => {
       }
     )
   ).json();
-
+    
   return token;
 };

@@ -30,7 +30,7 @@ export function MyStack({ stack, app }: StackContext) {
       },
     },
   });
-  // Create a HTTP API
+  
 const api = new Api(stack, "api", {
   authorizers: {
     userPool: {
@@ -116,6 +116,7 @@ const site = new ViteStaticSite(stack, "Site", {
 stack.addOutputs({
   api_endpoint: api.url,
   auth_client_id: auth.userPoolClientId,
+  userPoolId:auth.userPoolId,
   domain: domain.domainName,
   site_url: site.url,
 });
